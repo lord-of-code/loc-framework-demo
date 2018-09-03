@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: test
+  application:
+    name: loc-demo
+
+loc.web.springmvc.swagger2.restapi:
+  base-package: com.loc.framework.springmvc.demo
+
+server:
+  port: 8080
+
+logbook:
+  filter.enabled: true
+  format.style: json
+  exclude:
+    - /acutotor/**
+    - /admin/**
+  write:
+    category: com.loc.framework.accesslog
+    level: INFO
+    max-body-size: 2048
+
